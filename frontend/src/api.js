@@ -3,7 +3,7 @@
 // generator that runs the same 4-step math, so the UI still works standalone.
 import { buildMockDataset } from "./mockPipeline.js";
 
-const BASE = ""; // proxied to http://localhost:8000 in dev (see vite.config.js)
+const BASE = import.meta.env.VITE_API_BASE || ""; // proxied to http://localhost:8000 in dev (see vite.config.js)
 
 async function tryFetch(url) {
   try {
